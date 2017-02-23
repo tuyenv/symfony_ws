@@ -42,6 +42,7 @@ $ composer install
 </VirtualHost>
 ```
 
+Config parameters /app/config/parameters.yml
 
 ### Development
 
