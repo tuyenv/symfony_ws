@@ -1,0 +1,141 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Symfony",
+		"_postman_id": "1230d563-0de8-3bbe-5ecf-afa4820cf7d4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "404 - Not Found",
+			"request": {
+				"url": "symfony.tv/case404",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e2",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "500 - Exception",
+			"request": {
+				"url": "symfony.tv/user/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Try to throw exception"
+			},
+			"response": []
+		},
+		{
+			"name": "405 - Method Not Allowed",
+			"request": {
+				"url": "symfony.tv/user/1",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "400 - Bad Request - No API Key",
+			"request": {
+				"url": "http://symfony.tv/user/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "401 - Unauthorized - Wrong API Key",
+			"request": {
+				"url": "http://symfony.tv/user/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "wrongkey",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "404 - Non Existing User",
+			"request": {
+				"url": "http://symfony.tv/user/999999",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "403 - Permission denied",
+			"request": {
+				"url": "http://symfony.tv/user/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "200 - User Detail",
+			"request": {
+				"url": "http://symfony.tv/user/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e10adc3949ba59abbe56e057f20f883e",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
