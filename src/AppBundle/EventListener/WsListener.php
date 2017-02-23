@@ -72,11 +72,12 @@ class WsListener
                 return self::AUTH_NOT_VALID;
             }
 
+            $uid = $authenticate[0]['id'];
+            $event->getRequest()->attributes->set('userId', $uid);
+
             // check permission - we can check permission here for routing with param [uid]
             // uncomment this block in some specific case example (single page app)
             /*
-            $uid = $authenticate[0]['id'];
-            $event->getRequest()->attributes->set('userId', $uid);
             if ($request->query->has('uid') && $uid != $request->query->get('uid')) {
                 return self::AUTH_NOT_PERMISSION;
             }
